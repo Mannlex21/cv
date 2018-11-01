@@ -25,12 +25,6 @@ export default {
     grid-gap: 10px;
     padding: 10px;
   }
-  .grid-container > div {
-    
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-  }
 }
 @media screen and (max-width: 699px) {
   .grid-container {
@@ -41,11 +35,6 @@ export default {
       'main main main main main main';
     grid-gap: 10px;
     padding: 10px;
-  }
-  .grid-container > div {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
   }
 }
 </style>
