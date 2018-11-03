@@ -6,7 +6,12 @@
         <experiencie-div :info="item"></experiencie-div>
       </div>
     </div>
-    
+    <div class="content">
+      <h1 class="titleH1"><i class="material-icons icon">school</i> Educación</h1>
+      <div v-for="(item) in infoEducation" :key="item.id">
+        <experiencie-div :info="item"></experiencie-div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -25,6 +30,9 @@ export default {
   computed:{
     infoExperience(){
       return FileInfo.experience;
+    },
+    infoEducation(){
+      return FileInfo.education;
     }
   },
   methods:{
@@ -47,6 +55,7 @@ p,h1,h2,h3{
 .content{
   margin: 0;
   padding: 20px 0;
+  margin-bottom: 10px;
   -webkit-box-shadow: 0px 0px 5px 2px rgba(186,186,186,1);
   -moz-box-shadow: 0px 0px 5px 2px rgba(186,186,186,1);
   box-shadow: 0px 0px 5px 2px rgba(186,186,186,1);
