@@ -1,5 +1,5 @@
 <template>
-  <div class="divPrincipal">
+  <div class="divPrincipal" :style="{'background':(config.color_principal!='')?config.color_principal:'white'}">
     <div class="content">
       <h1 class="titleH1"><i class="material-icons icon">work</i> Experiencia</h1>
       <div v-for="(item) in infoExperience" :key="item.id">
@@ -29,10 +29,13 @@ export default {
   },
   computed:{
     infoExperience(){
-      return FileInfo.experience;
+      return FileInfo.info.experience;
     },
     infoEducation(){
-      return FileInfo.education;
+      return FileInfo.info.education;
+    },
+    config(){
+      return FileInfo.config;
     }
   },
   methods:{

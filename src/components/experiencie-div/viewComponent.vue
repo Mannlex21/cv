@@ -2,7 +2,7 @@
   <div class="div-experience-content">
     
     <div class="div-experience">
-      <h2 class="titleH2">{{info.company}}</h2>
+      <h2 class="titleH2">{{info.company.toUpperCase()}}</h2>
       <h3 class="titleH3" style="color:#424242;">{{info.position}}</h3>
       <h3 class="titleH3" style="font-size: 14px; color:#c62828;">{{info.date}}</h3>
       <p class="text-exp-resumen">{{info.resumen}}</p>
@@ -11,11 +11,14 @@
         @after-enter="afterEnter"
         @leave="leave"
       >
-        <p class="text-exp-detail" v-if="detail">{{info.detail}}</p>
+        <div v-if="detail">
+          <h3 class="titleH3" style="color:#424242;">Detalle de experiencia</h3>
+          <p class="text-exp-detail" >{{info.detail}}</p>
+        </div>
       </transition>
       <btn  :style="'padding: 0px 5px;background:#757575;width:80px;'" 
         class="btn-show-exp" 
-        :text="(!detail)?'Ver mas':'Ver menos'" 
+        :text="(!detail)?'Más':'Menos'" 
         :font_size="'14px'" 
         :font_color="'white'"
         v-on:click.native="mostrarInfo()"
@@ -35,6 +38,11 @@ export default {
   data(){
     return{
       detail:false
+    }
+  },
+  computed:{
+    config(){
+      return FileInfo.config;
     }
   },
   methods:{
