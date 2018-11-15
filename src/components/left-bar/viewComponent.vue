@@ -88,6 +88,9 @@ export default {
   margin-top:10px
 }
 @media screen and (min-width: 700px) {
+  .divPrincipal{
+    max-width: 320px;
+  }
   .imgPerfil{
     height: 200px;
     width: 200px;

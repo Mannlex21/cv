@@ -21,6 +21,7 @@
         :text="(!detail)?'Más':'Menos'" 
         :font_size="'14px'" 
         :font_color="'white'"
+        v-if="info.detail!=''"
         v-on:click.native="mostrarInfo()"
       ></btn>
     </div>
@@ -107,6 +108,7 @@ p,h1,h2,h3{
   color: black;
 }
 .div-experience-content{
+  width: 100%;
   display: inline-block;
 }
 .div-experience{
@@ -132,6 +134,7 @@ p,h1,h2,h3{
   font-size: 14px;
   text-align: justify;
   display: inline-block;
+  white-space: pre-line;
 }
 .btn-show-exp{
   width: 50px;

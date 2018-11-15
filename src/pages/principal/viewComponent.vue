@@ -18,10 +18,10 @@ export default {
 @media screen and (min-width: 700px) {
   .grid-container {
     display: grid;
-    grid-template-areas:
-      'header header header header header header'
-      'menu main main main main main'
-      'menu footer footer footer footer footer';
+    grid-template-areas: 
+    'header header header header header header header header' 
+    'menu main main main main main main main ' 
+    'menu footer footer footer footer footer footer footer';
     grid-gap: 10px;
     padding: 10px;
   }
